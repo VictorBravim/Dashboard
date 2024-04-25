@@ -38,6 +38,11 @@
             background-color: #f0f0f0;
             margin-bottom: 20px;
         }
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -48,6 +53,21 @@
         <a href="#">Produto 3</a>
     </div>
     <div class="content">
+        <!-- Cards dos produtos -->
+        <div class="card">
+            <h3>Produto 1</h3>
+            <p>Valor: R$ 100,00</p>
+        </div>
+        <div class="card">
+            <h3>Produto 2</h3>
+            <p>Valor: R$ 150,00</p>
+        </div>
+        <!-- Total dos produtos -->
+        <div class="card">
+            <h3>Total</h3>
+            <p>Valor total: R$ 250,00</p>
+        </div>
+        <!-- Gráficos dos produtos -->
         <canvas id="graficoProduto1" class="chart"></canvas>
         <!-- Outros gráficos aqui -->
     </div>
