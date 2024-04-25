@@ -34,6 +34,11 @@
             display: flex;
             flex-wrap: wrap;
         }
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
         .card {
             width: calc(33.33% - 20px); /* Largura de 1/3 da tela com margens */
             background-color: #f9f9f9;
@@ -57,27 +62,31 @@
     </div>
     <div class="content">
         <!-- Cards com nomes e valores dos produtos -->
-        <div class="card">
-            <h3>Produto 1</h3>
-            <p>Valor: $100</p>
-        </div>
-        <div class="card">
-            <h3>Produto 2</h3>
-            <p>Valor: $150</p>
-        </div>
-        <div class="card">
-            <h3>Total</h3>
-            <p>Valor Total: $250</p>
+        <div class="container">
+          <div class="card">
+             <h3>Produto 1</h3>
+             <p>Valor: $100</p>
+          </div>
+          <div class="card">
+             <h3>Produto 2</h3>
+             <p>Valor: $150</p>
+          </div>
+          <div class="card">
+             <h3>Total</h3>
+             <p>Valor Total: $250</p>
+          </div>
         </div>
         <!-- Gráficos -->
-        <div class="chart">
-            <canvas id="graficoProduto1"></canvas>
-        </div>
-        <div class="chart">
-            <canvas id="graficoProduto2"></canvas>
-        </div>
-        <div class="chart">
-            <canvas id="graficoProduto3"></canvas>
+        <div class="container">
+          <div class="chart">
+             <canvas id="graficoProduto1"></canvas>
+          </div>
+          <div class="chart">
+             <canvas id="graficoProduto2"></canvas>
+          </div>
+          <div class="chart">
+             <canvas id="graficoProduto3"></canvas>
+          </div>
         </div>
     </div>
 
