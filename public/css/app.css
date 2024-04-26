@@ -25,11 +25,15 @@ body {
     padding: 10px;
     text-decoration: none;
     color: white;
+    font-size: large;
+    font-weight: 400;
     display: block;
 }
 
 .sidebar a:hover {
-    background-color: #555;
+    background-color: #FFA817;
+    border-radius: 20px;
+    color: black;
 }
 
 .sidebar img {
@@ -41,8 +45,11 @@ body {
     margin: 0;
 }
 
-.sidebar h3 {
-    color: #E9ECF1;
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    gap: 20px;
 }
 
 .content {
@@ -58,12 +65,22 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 15px;
+    padding-right: 50px;
+}
+
+.nav-bar img {
+    width: 2%;
+    height: 30%;
 }
 
 .container {
     width: 100%;
+    height: 50vh;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
 }
 
@@ -73,6 +90,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 2%;
 }
 
 .card {
@@ -82,31 +100,41 @@ body {
     flex-direction: column;
     width: calc(20% - 20px);
     background-color: #f9f9f9;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px;
     padding-bottom: 40px;
     margin-right: 50px;
+    border-radius: 20px;
+}
+
+.active {
+    background: linear-gradient(90deg, rgba(22,65,100,1) 0%, rgba(17,56,92,1) 100%) !important;
+    color: #E9ECF1;
 }
 
 .card h1 {
     font-size: 3rem;
 }
 
-.card-graph {
+.chart-card {
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
     display: flex;
-    flex-direction: column;
-    width: 60%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 15px;
 }
 
-.card-graph-l {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
+.m-r {
+    margin-right: 4%;
 }
 
 .chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 300px;
-    background-color: #f0f0f0;
-    margin-top: 20px;
 }

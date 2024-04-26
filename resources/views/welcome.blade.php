@@ -11,18 +11,21 @@
     <div class="sidebar">
         <img src="{{ asset('img/user.png') }}" alt="user">
         <h1>Victor</h1>
-        <h3>victor@gmail</h3>
-        <a href="#">Home</a>
-        <a href="#">File</a>
-        <a href="#">Graph</a>
+        <div class="links">
+          <a href="#">Home</a>
+          <a href="#">Mensagems</a>
+          <a href="#">Pastas</a>
+          <a href="#">Localização</a>
+          <a href="#">Graficos</a>
+        </div>
     </div>
     <div class="content">
         <nav class="nav-bar">
             <h1>Dashboard</h1>
-            <img src="" alt="menu">
+            <img src="{{ asset('img/menu.png') }}" alt="menu">
         </nav>
         <div class="container-card">
-          <div class="card">
+          <div class="card active">
              <h3>Earning</h3>
              <h1>$ 26.000</h1>
           </div>
@@ -40,11 +43,15 @@
           </div>
         </div>
         <div class="container">
-            <div class="chart">
-               <canvas id="multiAxisChart"></canvas>
+            <div class="chart-card">
+              <div class="chart">
+                 <canvas id="multiAxisChart"></canvas>
+              </div>
             </div>
-            <div class="chart">
-               <canvas id="doughnutChart"></canvas>
+            <div class="chart-card m-r">
+              <div class="chart">
+                 <canvas id="doughnutChart"></canvas>
+              </div>
             </div>
         </div>
     </div>
@@ -56,14 +63,14 @@
                 label: 'Sales',
                 data: [65, 59, 80, 81, 56, 55],
                 yAxisID: 'y-axis-1',
-                borderColor: '#ff6384',
+                borderColor: '#FFA817',
                 borderWidth: 2,
                 fill: false
             }, {
                 label: 'Expenses',
                 data: [28, 48, 40, 19, 86, 27],
                 yAxisID: 'y-axis-2',
-                borderColor: '#36a2eb',
+                borderColor: '#0A2E50',
                 borderWidth: 2,
                 fill: false
             }]
@@ -99,7 +106,7 @@
             labels: ['Red', 'Blue', 'Yellow'],
             datasets: [{
                 data: [300, 50, 100],
-                backgroundColor: ['#ff6384', '#36a2eb', '#ffce56']
+                backgroundColor: ['#164164', '#0A2E50', '#FFA817']
             }]
         };
 
