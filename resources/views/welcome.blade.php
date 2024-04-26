@@ -10,13 +10,13 @@
 <body>
     <div class="sidebar">
         <img src="{{ asset('img/user.png') }}" alt="user">
-        <h1>Victor</h1>
+        <h1>Victor Bravim</h1>
         <div class="links">
-          <a href="#">Home</a>
-          <a href="#">Mensagems</a>
-          <a href="#">Pastas</a>
-          <a href="#">Localização</a>
-          <a href="#">Graficos</a>
+          <a href="#"><img src="{{ asset('img/home.png') }}" alt="home">Home</a>
+          <a href="#"><img src="{{ asset('img/mensagem.png') }}" alt="home">Mensagems</a>
+          <a href="#"><img src="{{ asset('img/folder.png') }}" alt="home">Pastas</a>
+          <a href="#"><img src="{{ asset('img/loc.png') }}" alt="home">Localização</a>
+          <a href="#"><img src="{{ asset('img/graph.png') }}" alt="home">Graficos</a>
         </div>
     </div>
     <div class="content">
@@ -26,7 +26,7 @@
         </nav>
         <div class="container-card">
           <div class="card active">
-             <h3>Earning</h3>
+             <h3>Ganho</h3>
              <h1>$ 26.000</h1>
           </div>
           <div class="card">
@@ -38,7 +38,7 @@
              <h1>12.590k</h1>
           </div>
           <div class="card">
-             <h3>Rating</h3>
+             <h3>Avaliação</h3>
              <h1>8,5</h1>
           </div>
         </div>
@@ -60,14 +60,14 @@
         var dataMultiAxis = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June'],
             datasets: [{
-                label: 'Sales',
+                label: 'Vendas',
                 data: [65, 59, 80, 81, 56, 55],
                 yAxisID: 'y-axis-1',
                 borderColor: '#FFA817',
                 borderWidth: 2,
                 fill: false
             }, {
-                label: 'Expenses',
+                label: 'Despesas',
                 data: [28, 48, 40, 19, 86, 27],
                 yAxisID: 'y-axis-2',
                 borderColor: '#0A2E50',
@@ -103,7 +103,7 @@
         });
 
         var dataDoughnut = {
-            labels: ['Red', 'Blue', 'Yellow'],
+            labels: ['1', '2', '3'],
             datasets: [{
                 data: [300, 50, 100],
                 backgroundColor: ['#164164', '#0A2E50', '#FFA817']
