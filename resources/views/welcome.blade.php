@@ -4,54 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard de Produtos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .sidebar {
-            height: 100%;
-            width: 200px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #333;
-            padding-top: 20px;
-        }
-        .sidebar a {
-            padding: 10px;
-            text-decoration: none;
-            color: white;
-            display: block;
-        }
-        .sidebar a:hover {
-            background-color: #555;
-        }
-        .content {
-            margin-left: 220px;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .container {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-        }
-        .card {
-            width: calc(33.33% - 20px); /* Largura de 1/3 da tela com margens */
-            background-color: #f9f9f9;
-            padding: 20px;
-            margin: 10px;
-        }
-        .chart {
-            width: 100%;
-            height: 300px;
-            background-color: #f0f0f0;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
