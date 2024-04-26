@@ -3,83 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Produtos</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="sidebar">
-        <a href="#">Produto 1</a>
-        <a href="#">Produto 2</a>
-        <a href="#">Produto 3</a>
+        <img src="{{ asset('img/user.png') }}" alt="user">
+        <h1>Victor</h1>
+        <h3>victor@gmail</h3>
+        <a href="#">Home</a>
+        <a href="#">File</a>
+        <a href="#">Graph</a>
     </div>
     <div class="content">
-        <!-- Cards com nomes e valores dos produtos -->
-        <div class="container">
+        <nav class="nav-bar">
+            <h1>Dashboard</h1>
+            <img src="" alt="menu">
+        </nav>
+        <div class="container-card">
           <div class="card">
-             <h3>Produto 1</h3>
-             <p>Valor: $100</p>
+             <h3>Earning</h3>
+             <h1>R$ 26.000</h1>
           </div>
           <div class="card">
-             <h3>Produto 2</h3>
-             <p>Valor: $150</p>
+             <h3>Share</h3>
+             <h1>2.434k</h1>
           </div>
           <div class="card">
-             <h3>Total</h3>
-             <p>Valor Total: $250</p>
+             <h3>Likes</h3>
+             <h1>12.590k</h1>
+          </div>
+          <div class="card">
+             <h3>Rating</h3>
+             <h1>8,5</h1>
           </div>
         </div>
-        <!-- Gráficos -->
         <div class="container">
-          <div class="chart">
-             <canvas id="graficoProduto1"></canvas>
+          <div class="card-graph">
+            <div class="chart">
+               <canvas id="multiAxisChart"></canvas>
+            </div>
+            <div class="chart">
+               <canvas id="lineChart"></canvas>
+            </div>
           </div>
           <div class="chart">
-             <canvas id="graficoProduto2"></canvas>
-          </div>
-          <div class="chart">
-             <canvas id="graficoProduto3"></canvas>
+             <canvas id="doughnutChart"></canvas>
           </div>
         </div>
     </div>
 
     <script>
-        // Dados de exemplo para os gráficos
-        var dadosProduto1 = {
-            labels: ['A', 'B', 'C'],
+        var dataMultiAxis = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
             datasets: [{
-                label: 'Dados Produto 1',
-                data: [300, 50, 100],
-                backgroundColor: ['#ff6384', '#36a2eb', '#ffce56']
-            }]
-        };
-
-        var dadosProduto2 = {
-            labels: ['X', 'Y', 'Z'],
-            datasets: [{
-                label: 'Dados Produto 2',
-                data: [100, 200, 150],
-                backgroundColor: ['#ff6384', '#36a2eb', '#ffce56']
-            }]
-        };
-
-        var dadosProduto3 = {
-            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
-            datasets: [{
-                label: 'Vendas',
-                data: [12, 19, 3, 5, 2, 3],
-                borderColor: '#ff6384',
+                label: 'Sales',
+                data: [65, 59, 80, 81, 56, 55],
                 yAxisID: 'y-axis-1',
+                borderColor: '#ff6384',
+                borderWidth: 2,
+                fill: false
             }, {
-                label: 'Despesas',
-                data: [1, 2, 1, 1, 2, 2],
-                borderColor: '#36a2eb',
+                label: 'Expenses',
+                data: [28, 48, 40, 19, 86, 27],
                 yAxisID: 'y-axis-2',
+                borderColor: '#36a2eb',
+                borderWidth: 2,
+                fill: false
             }]
         };
 
-        // Opções para o gráfico de linha com eixo múltiplo
-        var optionsProduto3 = {
+        var optionsMultiAxis = {
             scales: {
                 yAxes: [{
                     type: 'linear',
@@ -94,28 +89,45 @@
                     gridLines: {
                         drawOnChartArea: false,
                     },
-                }],
+                }]
             }
         };
 
-        // Criar os gráficos
-        var ctxProduto1 = document.getElementById('graficoProduto1').getContext('2d');
-        var myPieChart1 = new Chart(ctxProduto1, {
-            type: 'pie',
-            data: dadosProduto1
-        });
-
-        var ctxProduto2 = document.getElementById('graficoProduto2').getContext('2d');
-        var myPieChart2 = new Chart(ctxProduto2, {
-            type: 'pie',
-            data: dadosProduto2
-        });
-
-        var ctxProduto3 = document.getElementById('graficoProduto3').getContext('2d');
-        var myLineChart3 = new Chart(ctxProduto3, {
+        var ctxMultiAxis = document.getElementById('multiAxisChart').getContext('2d');
+        var multiAxisChart = new Chart(ctxMultiAxis, {
             type: 'line',
-            data: dadosProduto3,
-            options: optionsProduto3
+            data: dataMultiAxis,
+            options: optionsMultiAxis
+        });
+
+        var dataLine = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+            datasets: [{
+                label: 'Performance',
+                data: [12, 19, 3, 5, 2, 3],
+                borderColor: '#ff6384',
+                fill: false
+            }]
+        };
+
+        var ctxLine = document.getElementById('lineChart').getContext('2d');
+        var lineChart = new Chart(ctxLine, {
+            type: 'line',
+            data: dataLine
+        });
+
+        var dataDoughnut = {
+            labels: ['Red', 'Blue', 'Yellow'],
+            datasets: [{
+                data: [300, 50, 100],
+                backgroundColor: ['#ff6384', '#36a2eb', '#ffce56']
+            }]
+        };
+
+        var ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
+        var doughnutChart = new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: dataDoughnut
         });
     </script>
 </body>
