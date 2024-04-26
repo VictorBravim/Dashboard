@@ -48,7 +48,7 @@ body {
 .content {
     width: screen;
     height: screen;
-    margin-left: 320px;
+    margin-left: 340px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +58,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin: 15px;
 }
 
 .container {
@@ -83,12 +84,24 @@ body {
     background-color: #f9f9f9;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 20px;
-    margin: 10px;
+    padding-bottom: 40px;
+    margin-right: 50px;
+}
+
+.card h1 {
+    font-size: 3rem;
 }
 
 .card-graph {
     display: flex;
     flex-direction: column;
+    width: 60%;
+}
+
+.card-graph-l {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
 }
 
 .chart {

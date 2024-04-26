@@ -24,7 +24,7 @@
         <div class="container-card">
           <div class="card">
              <h3>Earning</h3>
-             <h1>R$ 26.000</h1>
+             <h1>$ 26.000</h1>
           </div>
           <div class="card">
              <h3>Share</h3>
@@ -40,17 +40,12 @@
           </div>
         </div>
         <div class="container">
-          <div class="card-graph">
             <div class="chart">
                <canvas id="multiAxisChart"></canvas>
             </div>
             <div class="chart">
-               <canvas id="lineChart"></canvas>
+               <canvas id="doughnutChart"></canvas>
             </div>
-          </div>
-          <div class="chart">
-             <canvas id="doughnutChart"></canvas>
-          </div>
         </div>
     </div>
 
@@ -98,22 +93,6 @@
             type: 'line',
             data: dataMultiAxis,
             options: optionsMultiAxis
-        });
-
-        var dataLine = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-            datasets: [{
-                label: 'Performance',
-                data: [12, 19, 3, 5, 2, 3],
-                borderColor: '#ff6384',
-                fill: false
-            }]
-        };
-
-        var ctxLine = document.getElementById('lineChart').getContext('2d');
-        var lineChart = new Chart(ctxLine, {
-            type: 'line',
-            data: dataLine
         });
 
         var dataDoughnut = {
