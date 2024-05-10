@@ -1,35 +1,41 @@
-# Dashboard
+# 📊 Dashboard
 
-![Sem título 1](https://github.com/VictorBravim/Dashboard/assets/122113588/d8861ec0-8457-4474-b675-df2cf1c78910)
+![231shots_so](https://github.com/VictorBravim/Dashboard/assets/122113588/56580946-7fb0-403b-bae6-74ef8a743715)
 
-Este é um projeto de dashboard construído com Laravel, utilizando o framework para o back-end e Chart.js para criar gráficos dinâmicos. O dashboard exibe dados estatísticos e fornece uma interface amigável para visualizar informações importantes.
+## 🚀 Overview
 
-## <code>Instalação</code>
+This is a dashboard project built with Laravel, using the framework for the back-end and Chart.js to create dynamic charts. The dashboard displays statistical data and provides a user-friendly interface for viewing important information.
 
-Antes de iniciar, certifique-se de ter o Composer e o Laravel instalados localmente. Em seguida, siga estas etapas para configurar o projeto:
+## 📋 Requirements
 
-1. Clone este repositório:
+- Laravel
+- Composer
+- PHP
+
+## Installation
+
+1. 🔧 Clone this repository:
    
-   ```
-   git clone https://github.com/VictorBravim/Dashboard.git
-   ```
+```
+git clone https://github.com/VictorBravim/Dashboard.git
+```
 
-2. Navegue até o diretório do projeto:
+2. Navigate to the project directory:
    
-   ```
-   cd nome-do-repositorio
-   ```
+```
+cd Dashboard
+```
 
-3. Instale as dependências do Composer:
+3. Install Composer dependencies:
 
-   ```
-   composer install
-   ```
+```
+composer install
+```
 
-## <code>Uso</code>
+## 🛠️ Project Structure
 
-Após a instalação e configuração, você pode acessar o dashboard no navegador digitando `http://localhost:8000` (ou o URL correspondente).
+- Dashboard.php
 
-## <code>Licença</code>
+## 📄 License
 
-Este projeto está licenciado sob a MIT License.
+- This project is licensed under the [MIT License](LICENSE).
